@@ -32,7 +32,6 @@ A custom Fedora Atomic image designed for gaming, development and daily use.
 - Fixed Plasma integration with Google Drive
 - Ghostty terminal, Starship prompt, Zsh, `fuck` alias and Atuin history search (Ctrl+R)
 - OpenRGB and CoolerControl
-- Sonic Adventure mods (SADX and SA2) setup script
 - Switch to standalone SteamOS session from login screen
 - Virtual Machine Manager, libvirt and QEMU
 - VLC, mpv, HandBrake and Audacity
@@ -78,9 +77,6 @@ ujust amy-setup-ghostty
 
 # Setup shell configurations (zsh, bash)
 ujust amy-setup-shells
-
-# Setup Sonic Adventure mods (SADX and SA2)
-ujust amy-setup-samods
 
 # Restart Bluetooth to fix issues
 ujust amy-fix-bt
