@@ -57,7 +57,7 @@ amy-install-appimages:
         }
       fi
 
-      # Handle JSON API responses (like cursor.com API)
+      # Handle JSON API responses
       if [[ "$url" != http*github.com* ]]; then
         response=$(curl --retry 3 -sL "$url")
         if echo "$response" | jq -e '.downloadUrl' >/dev/null 2>&1; then
@@ -82,12 +82,12 @@ amy-install-appimages:
 
 
 
-# Setup Amy OS recommended settings for Cursor and VSCode
+# Setup Amy OS recommended settings for VSCode
 amy-setup-editors:
     #!/usr/bin/env bash
     set -euo pipefail
 
-    for editor in "Cursor" "Code"; do
+    for editor in "Code"; do
       echo "Setting up $editor configuration..."
       config_dir="${HOME}/.config/${editor}/User"
       mkdir -p "$config_dir"
@@ -247,9 +247,7 @@ amy-clean:
     set -euo pipefail
 
     echo "Cleaning up system..."
-    docker system prune -af
     podman system prune -af
     flatpak uninstall --unused
     rpm-ostree cleanup -bm
-    sudo docker system prune -af
     sudo podman system prune -af

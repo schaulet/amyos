@@ -50,11 +50,6 @@ declare -A RPM_PACKAGES=(
     ubuntumono-nerd-fonts \
     ubuntusans-nerd-fonts"
 
-  ["rpmfusion-free,rpmfusion-nonfree"]="\
-    audacious \
-    audacious-plugins-freeworld \
-    audacity-freeworld"
-
   ["fedora-multimedia"]="\
     HandBrake-cli \
     HandBrake-gui \
@@ -66,15 +61,7 @@ declare -A RPM_PACKAGES=(
     vlc-plugin-pause-click \
     vlc"
 
-  ["docker-ce"]="\
-    containerd.io \
-    docker-buildx-plugin \
-    docker-ce \
-    docker-ce-cli \
-    docker-compose-plugin"
-
   ["brave-browser"]="brave-browser"
-  ["cloudflare-warp"]="cloudflare-warp"
   ["vscode"]="code"
 )
 
@@ -101,7 +88,7 @@ for repo in "${!RPM_PACKAGES[@]}"; do
 done
 
 log "Enabling system services"
-systemctl enable docker.socket libvirtd.service
+systemctl enable libvirtd.service
 
 log "Adding Amy OS just recipes"
 echo "import \"/usr/share/amyos/just/amy.just\"" >>/usr/share/ublue-os/justfile

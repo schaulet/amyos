@@ -23,19 +23,17 @@ A custom Fedora Atomic image designed for gaming, development and daily use.
 
 - [Bazzite features](https://github.com/ublue-os/bazzite#about--features)
 - ADB, Fastboot and [Waydroid](https://docs.bazzite.gg/Installing_and_Managing_Software/Waydroid_Setup_Guide/)
-- Audacious with Winamp skins
 - Brave Browser
-- Cloudflare WARP
 - Curated list of [Flatpaks](https://github.com/astrovm/amyos/blob/main/repo_files/flatpaks), [Homebrews](https://github.com/astrovm/amyos/blob/main/repo_files/brews) and [AppImages](https://github.com/astrovm/amyos/blob/main/repo_files/appimages)
 - DNS over TLS, DNSSEC and MAC address randomization enabled
-- Docker, Podman, Distrobox and Toolbx
+- Podman, Distrobox and Toolbx
 - Fixed Plasma integration with Google Drive
 - Ghostty terminal, Starship prompt, Zsh, `fuck` alias and Atuin history search (Ctrl+R)
 - OpenRGB and CoolerControl
 - Switch to standalone SteamOS session from login screen
 - Virtual Machine Manager, libvirt and QEMU
-- VLC, mpv, HandBrake and Audacity
-- VSCode, Cursor (with Remote Tunnels fixed), Neovim
+- VLC, mpv and HandBrake
+- VSCode, Neovim
 
 ## Install
 
@@ -54,7 +52,7 @@ If you want to install the image on a new system download and install Bazzite IS
 The following `ujust` commands are available:
 
 ```bash
-# Clean up old packages and Docker/Podman images and volumes
+# Clean up old packages and Podman images and volumes
 ujust amy-clean
 
 # Install all Amy OS apps
@@ -69,7 +67,7 @@ ujust amy-install-brews
 # Install only AppImages
 ujust amy-install-appimages
 
-# Setup Amy OS settings for Cursor and VSCode
+# Setup Amy OS settings for VSCode
 ujust amy-setup-editors
 
 # Setup Ghostty terminal configuration
