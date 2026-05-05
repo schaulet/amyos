@@ -50,7 +50,7 @@ declare -A RPM_PACKAGES=(
     ubuntumono-nerd-fonts \
     ubuntusans-nerd-fonts"
 
-  ["rpmfusion-free,rpmfusion-free-updates,rpmfusion-nonfree,rpmfusion-nonfree-updates"]="\
+  ["rpmfusion-free,rpmfusion-nonfree"]="\
     audacious \
     audacious-plugins-freeworld \
     audacity-freeworld"
