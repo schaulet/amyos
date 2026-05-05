@@ -87,9 +87,6 @@ for repo in "${!RPM_PACKAGES[@]}"; do
   fi
 done
 
-log "Enabling system services"
-systemctl enable libvirtd.service
-
 log "Adding Amy OS just recipes"
 echo "import \"/usr/share/amyos/just/amy.just\"" >>/usr/share/ublue-os/justfile
 
